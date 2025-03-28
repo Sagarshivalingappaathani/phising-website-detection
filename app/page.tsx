@@ -247,7 +247,7 @@ const Index = () => {
             <div className="glass-card flex flex-col items-center p-8 rounded-xl min-w-[240px] transition-all duration-300 hover:shadow-lg hover:scale-105 border-2 border-purple-100 dark:border-purple-900/30">
               <Badge variant="outline" className="mb-4 px-4 py-1.5 text-sm bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300">Guide</Badge>
               <BookOpen className="h-10 w-10 text-indigo-500 dark:text-indigo-400 mb-3" />
-              <p className="font-semibold text-xl text-slate-800 dark:text-slate-200 mb-2">Jiader Sir</p>
+              <p className="font-semibold text-xl text-slate-800 dark:text-slate-200 mb-2">Prof Jaidhar C D</p>
               <p className="text-sm text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800/50 px-3 py-1.5 rounded-full mt-1">Faculty Mentor</p>
             </div>
             <div className="glass-card flex flex-col items-center p-8 rounded-xl min-w-[240px] transition-all duration-300 hover:shadow-lg hover:scale-105 border-2 border-purple-100 dark:border-purple-900/30">
