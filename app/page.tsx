@@ -305,19 +305,33 @@ const Index = () => {
                           <ExternalLink className="h-5 w-5 text-slate-400 group-focus-within:text-blue-500" />
                         </div>
                       </div>
-                      <Button
-                        type="submit"
-                        disabled={loading || !url}
-                        className="h-14 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-base"
-                      >
-                        {loading ? (
-                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                        ) : (
-                          <Shield className="mr-2 h-5 w-5" />
-                        )}
-                        {loading ? "Analyzing..." : "Analyze"}
-                        {!loading && <ArrowRight className="ml-2 h-4 w-4" />}
-                      </Button>
+
+                      {!result ? (
+                        <Button
+                          type="submit"
+                          disabled={loading || !url}
+                          className="h-14 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-base"
+                        >
+                          {loading ? (
+                            <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          ) : (
+                            <Shield className="mr-2 h-5 w-5" />
+                          )}
+                          {loading ? "Analyzing..." : "Analyze"}
+                          {!loading && <ArrowRight className="ml-2 h-4 w-4" />}
+                        </Button>
+                      ) : (
+                        <Button
+                          type="button"
+                          onClick={() => {
+                            setResult(null);
+                            setUrl(""); // Optional: clear the URL input as well
+                          }}
+                          className="h-14 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 text-base"
+                        >
+                          Clear
+                        </Button>
+                      )}
                     </div>
                   </form>
 
